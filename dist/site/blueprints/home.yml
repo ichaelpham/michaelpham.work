@@ -1,0 +1,12 @@
+title: Page
+pages: true
+files: true
+fields:
+  intro:
+    label: Intro
+    type:  textarea
+  pageSettings:
+    extends: pagesettings
+  title:
+    label: Title
+    type:  text

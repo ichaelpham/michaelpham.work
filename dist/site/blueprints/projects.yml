@@ -1,0 +1,22 @@
+title: Projects
+pages: false
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  link:
+    label: Link
+    type:  url
+  year:
+    label: Year
+    type: date
+    format: YYYY
+  img:
+    label: Image
+    type:  image
+  detail:
+    label: Detail
+    type:  textarea
+    buttons:
+      - link

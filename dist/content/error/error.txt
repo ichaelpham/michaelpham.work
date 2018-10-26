@@ -1,0 +1,16 @@
+Title: Error
+
+----
+
+Text: 
+
+Whoops, this page doesn't exist. 
+(link: https://michaelpham.work text: Click here) to return home.
+
+----
+
+Metadescription: Whoops, this page doesn't exist
+
+----
+
+Twittercard: 

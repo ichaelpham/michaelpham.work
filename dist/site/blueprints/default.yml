@@ -1,0 +1,16 @@
+title: Page
+pages: false
+files: false
+  fields:
+    caption:
+      label: Title
+      type: text
+fields:
+  pageSettings:
+    extends: pagesettings
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea

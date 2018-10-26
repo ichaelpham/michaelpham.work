@@ -1,0 +1,16 @@
+<svg class="duotone-filters" xmlns="http://www.w3.org/2000/svg">
+    <filter id="duotone_blue">
+        <feColorMatrix type="matrix" result="gray"
+            values="1 0 0 0 0
+                    1 0 0 0 0
+                    1 0 0 0 0
+                    0 0 0 1 0" >
+        </feColorMatrix>
+        <feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+            <feFuncR type="table" tableValues="1 0.00392157"></feFuncR>
+            <feFuncG type="table" tableValues="1 0.00392157"></feFuncG>
+            <feFuncB type="table" tableValues="1 0.21568627"></feFuncB>
+            <feFuncA type="table" tableValues="0.5 1"></feFuncA>
+        </feComponentTransfer>
+    </filter>
+</svg>
