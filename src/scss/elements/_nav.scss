@@ -1,0 +1,13 @@
+@include b('nav') {
+  display: block;
+  z-index: 1000;
+  position: fixed;
+    @include e('bar') {
+      list-style: none;
+      display: inline-block;
+    }
+    @include e('links') {
+      color: color(black);
+      display: inline-block;
+    }
+}

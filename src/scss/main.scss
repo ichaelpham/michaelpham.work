@@ -1,0 +1,33 @@
+/**
+ *  Styles
+ */
+
+// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
+// Note: `bower_components` is already in Sass's path
+
+// Configuration variables and settings
+@import "helpers/config";
+
+// Library: mixins, functions, etc. specific to this theme
+@import "helpers/library";
+@import "helpers/normalize";
+@import "helpers/bem";
+@import "helpers/reset";
+
+// Elements
+@import "elements/spacing";
+@import "elements/colours";
+@import "elements/type";
+@import "elements/grid";
+@import "elements/buttons";
+@import "elements/elements";
+@import "elements/nav";
+@import "elements/images";
+@import "elements/slide";
+
+// Global
+@import "elements/global";
+
+// Objects
+@import "views/home";
+@import "views/default";

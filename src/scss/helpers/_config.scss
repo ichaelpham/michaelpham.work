@@ -1,0 +1,68 @@
+/**
+ *  Media Queries and Breakpoints
+ */
+
+// Extra small screen / phone
+$screen-xs: 480px !default;
+
+// Small screen / tablet
+$screen-sm: 768px !default;
+
+// Medium screen / desktop
+$screen-md: 992px !default;
+
+// Large screen / wide desktop
+$screen-lg: 1230px !default;
+
+// Extra Large screen / wide desktop
+$screen-xlg: 1700px !default;
+
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-xs + 1) !default;
+$screen-sm-max: ($screen-sm + 1) !default;
+$screen-md-max: ($screen-md + 1) !default;
+$screen-lg-max: ($screen-lg + 1) !default
+
+@mixin mobile {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg-desktop {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xlg-desktop {
+  @media (max-width: #{$screen-xlg + 1}) {
+    @content;
+  }
+}
+
+
+// NOTE: This is how you use the above
+// p {
+//   font-size: 16px;
+//   @include tablet {
+//     font-size: 18px;
+//   }
+//   @include desktop {
+//     font-size: 20px;
+//   }
+// }

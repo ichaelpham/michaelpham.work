@@ -1,0 +1,143 @@
+/**
+ *  Typography
+ */
+
+//## Input external font here
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('../fonts/Graphik-Regular.eot');
+//   src: url('../fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype');
+//     // url('../fonts/Graphik-Regular.woff') format('woff'),
+//     // url('../fonts/Graphik-Regular.ttf') format('truetype'),
+//     // url('../fonts/Graphik-Regular.svg') format('svg');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('../fonts/Graphik-Medium.eot');
+//   src: url('../fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+//     // url('../fonts/Graphik-Medium.woff') format('woff'),
+//     // url('../fonts/Graphik-Medium.ttf') format('truetype'),
+//     url('../fonts/Graphik-Medium.svg') format('svg');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'SpaceGrotesk-Light';
+  // src: url('../fonts/space/SpaceGrotesk-Regular.eot');
+  // src: url('../fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype');
+    src: url('../fonts/space/SpaceGrotesk-Light.woff') format('woff');
+    // url('../fonts/Graphik-Regular.ttf') format('truetype'),
+    // url('../fonts/Graphik-Regular.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+$font-family: 'SpaceGrotesk-Light', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+/**
+ *  Font weight variables
+ */
+$x-bold: 700;
+$bold: 500;
+$normal: 300;
+
+/**
+ *  Font sizes
+ *
+ *	Map options: null, x-small, small, medium, large, x-large
+ *
+ */
+
+$xsmall-font-sizes: (
+ null  : (10px, 18px),
+ medium: (10px, 18px),
+	large: (.6vw, 1.4em)
+);
+
+$p-font-sizes: (
+  null  : (16px, 23px),
+  medium: (16px, 23px),
+	large: (1.1vw, 1.5em)
+);
+
+$h1-font-sizes: (
+  null  : (20px, 26px),
+	large: (1.6vw, 1.4em)
+);
+
+$h2-font-sizes: (
+  null  : (20px, 25px),
+  small : 26px,
+  medium: (32px, 40px)
+);
+
+// H1 And H2 the same to be used for SEO
+
+$h3-font-sizes: (
+  null  : (18px, 1.4),
+  small  : (18px, 1.4),
+  medium: (18px, 1.4),
+	large: (1.2vw, 1.2em)
+);
+
+$h4-font-sizes: (
+  null  : (18px, 1.4),
+  small : 17px,
+  medium: 20px
+);
+
+$h5-font-sizes: (
+  null  : (18px, 1.4),
+  small : 17px,
+  medium: 14px
+);
+
+$medium-font-sizes: (
+  null  : (24px, 1.4),
+  small : 24px,
+  medium: (24px, 1.4),
+  large: (1.4vw, 1.4)
+);
+
+p, h1, h2, h3, h4, h5{
+  font-family: $font-family;
+}
+
+p{
+	margin-top: 0px;
+  @include spacing(margin-bottom, $pink-spacing);
+}
+
+p, body{
+  @include font-size($p-font-sizes);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+h1, h2, p.header-size{
+  @include font-size($h1-font-sizes);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+	margin:0 0 1em 0;
+}
+
+h3{
+  @include font-size($h3-font-sizes);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+h4{
+  @include font-size($h4-font-sizes);
+  font-weight: 300;
+}
+
+h5{
+  @include font-size($h5-font-sizes);
+  font-weight: 300;
+}

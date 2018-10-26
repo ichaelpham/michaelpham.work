@@ -1,0 +1,85 @@
+// Spacing
+
+/**
+ *  Spacing Map
+ *  Example usage:
+ *
+ *  $purple-spacing: (
+ *    null  : (20px),
+ *    small : 20px,
+ *    medium: 40px
+ *  );
+ *
+ *  .test{
+ *    @include spacing(padding-bottom, $purple-spacing);
+ *  }
+ */
+
+$red-spacing: (
+    null : (5px), // large * 0.7
+    small : .602vw,
+    large: 8px
+);
+
+// NOTE: You'll be only this margin
+$pink-spacing: (
+    null : (11px),
+    small : 1.204vw,
+    large: 16px
+);
+
+// NOTE: You'll be only this margin
+$blue-spacing: (
+    null : (17px),
+    small : 1.807vw,
+    large: 24px
+);
+
+$cyan-spacing: (
+    null : (22px),
+    small : 2.409vw,
+    large: 32px
+);
+
+// NOTE: You'll be only this margin
+$green-spacing: (
+    null : (32px),
+    small : 3.614vw,
+    large: 48px
+);
+
+$yellow-spacing: (
+    null : (50px),
+    small : 5.421vw,
+    large: 72px
+);
+
+$brown-spacing: (
+    null : (77px),
+    small : 7.83vw,
+    large: 104px
+);
+
+$orange-spacing: (
+    null : (20px),
+    small : 11.45vw,
+    large: 152px
+);
+
+.spacing--cyan{
+    @include spacing(padding-bottom, $cyan-spacing);
+}
+.spacing--green{
+    @include spacing(padding-bottom, $green-spacing);
+}
+.spacing--blue{
+    @include spacing(padding-bottom, $blue-spacing);
+}
+
+.spacing--brown{
+    @include spacing(padding-bottom, $brown-spacing);
+}
+
+.spacing--yellow{
+		@include spacing(padding-bottom, $yellow-spacing);
+}

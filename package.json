@@ -1,0 +1,86 @@
+{
+  "name": "kirby-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for kirby with some front end tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichaelpham/kirby-boilerplate.git"
+  },
+  "author": "Michael Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichaelpham/kirby-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ichaelpham/kirby-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "barba.js": "^1.0.0",
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-connect-php": "0.0.5",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-responsive": "^2.11.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "node-notifier": "^5.2.1",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "autoprefixer": "^9.1.5",
+    "browserify": "^16.2.2",
+    "browserify-shim": "^3.8.14",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "~4.16.0",
+    "gulp-connect-php7": "^1.0.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-uglifycss": "^1.1.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.12.0",
+    "lazysizes": "^4.1.1",
+    "postcss": "^7.0.2",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "querystring": "~0.2.0",
+    "request": "^2.88.0",
+    "sharp": "^0.20.8",
+    "slick-carousel": "^1.8.1",
+    "vinyl-transform": "^1.0.0"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "owlcarousel": {
+      "exports": "owlcarousel",
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
+  "browserslist": [
+    "> 0.3%",
+    "last 7 versions",
+    "Android >= 4",
+    "Firefox >= 20",
+    "iOS >= 8"
+  ]
+}

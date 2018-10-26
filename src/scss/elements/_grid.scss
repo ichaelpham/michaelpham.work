@@ -1,0 +1,49 @@
+$grid-columns: 12;
+$gutter: 28px; //modify this
+
+//Columns mixin
+@mixin col($values) {
+  width: 100%;
+  flex: 0 0 auto;
+  img {
+    width:100%;
+  }
+  > div {
+    display: inline-block;
+  }
+  @each $var in $values {
+       max-width: calc(#{(100% / $grid-columns) * $var} - #{(($var - 1) * $gutter) / $var)});
+       flex-basis: calc(#{(100% / $grid-columns) * $var} - #{$gutter});
+   }
+}
+
+@mixin row{
+  display: flex;
+  /* autoprefixer: ignore next */
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin push($values) {
+  @each $var in $values {
+       margin-left: calc(#{$gutter} + #{(100% / $grid-columns) * $var});
+   }
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+@include b('wrapper'){
+  max-width: 95%;
+  @include desktop {
+    max-width: 90%;
+  }
+  @include xlg-desktop {
+    max-width: 1366px;
+  }
+}

@@ -1,0 +1,90 @@
+// For lazy sizes
+
+img,
+img[data-sizes="auto"] {
+  display: block;
+  width: 100%;
+}
+
+.ratio--rec, .ratio--squ, .ratio--wid {
+    position: relative;
+    width:100%;
+    overflow:hidden;
+    .lazyload {
+    	opacity: 1;
+      background: color(debug);
+    }
+    .lazyloading {
+    	opacity: 1;
+    	transition: opacity 300ms;
+      min-height:100%;
+      background: color(debug);
+    }
+    .lazyloaded{
+      background: grey;
+    }
+}
+
+img.lazyloading {
+		opacity: 0;
+		transition: opacity 400ms;
+	}
+
+img.lazyloaded {
+		opacity: 1;
+	}
+
+.ratio--rec:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    // 16:10 = 62.5% = calc(10 / 16 * 100%)
+    padding-bottom: 62.5%;
+}
+
+.ratio--squ:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    // 1:1 = 100% = calc(1 / 1 * 100%)
+    padding-bottom: 100%;
+}
+
+.ratio--wid:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    // 2:1 = 50% = calc(1 / 2 * 100%)
+    padding-bottom: 50%;
+}
+
+.ratio--rec > *,
+.ratio--squ > *,
+.ratio--wid > *,{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.ratio--rec .lazyautosizes,
+.ratio--squ .lazyautosizes,
+.ratio--wid .lazyautosizes,
+.ratio--rec .lazyloading,
+.ratio--squ .lazyloading,
+.ratio--wid .lazyloading {
+		opacity: 0;
+		transition: opacity 400ms;
+	}
+
+.ratio--rec img.lazyloaded,
+.ratio--squ img.lazyloaded,
+.ratio--wid img.lazyloaded {
+	opacity: 1;
+}
